@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "fs": "0.0.1-security",
+    "morgan": "^1.9.0",
+    "path": "^0.12.7",
+    "pg": "^7.4.1",
+    "sequelize": "^4.32.1",
+    "sequelize-cli": "^3.2.0"
+  }
+}
