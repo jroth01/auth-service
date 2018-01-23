@@ -9,8 +9,8 @@
     "fs": "0.0.1-security",
     "morgan": "^1.9.0",
     "path": "^0.12.7",
-    "pg": "^7.4.1",
-    "sequelize": "^4.32.1",
+    "pg": "^6.4.1",
+    "sequelize": "^3.2.0",
     "sequelize-cli": "^3.2.0"
   }
 }

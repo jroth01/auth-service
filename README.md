@@ -3,11 +3,11 @@ An authentication service using Node, Express, PostgreSQL, Sequelize, Passport.
 
 # Purpose
 My goals for this project are:
--build a simple and flexible authentication service from scratch
--practice relational db schema design
--safely set up db migration with Sequelize
--become more familiar with JWT vs opaque tokens
--evaluate authentication security
+- build a simple and flexible authentication service from scratch
+- practice relational db schema design
+- safely set up db migration with Sequelize
+- become more familiar with JWT vs opaque tokens
+- evaluate authentication security
 
 # Features
 Support for accounts with many users that can have different roles

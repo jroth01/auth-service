@@ -1,6 +1,10 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   var Users = sequelize.define('users', {
+    userID: {
+       type: DataTypes.INTEGER,
+       primaryKey: true
+    },
     firstName: DataTypes.STRING(50),
     lastName: DataTypes.STRING(100),
     userName: {

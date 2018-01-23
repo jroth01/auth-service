@@ -1,6 +1,10 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   var Memberships = sequelize.define('memberships', {
+    membershipID: {
+       type: DataTypes.INTEGER,
+       primaryKey: true
+    },
     relatedUserID: DataTypes.INTEGER,
     relatedAccountID: DataTypes.INTEGER,
     relatedRoleID: DataTypes.INTEGER,
@@ -11,9 +15,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     classMethods: {
       associate: function(models) {
-        // models.Memberships.hasOne(models.Accounts)
-        // models.Memberships.hasMany(models.Users)
-        // associations can be defined here
+        models.Memberships.hasOne(models.Accounts, { foreignKey: 'accountID' })
       }
     }
   });

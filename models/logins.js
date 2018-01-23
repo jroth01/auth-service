@@ -1,6 +1,10 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   var Logins = sequelize.define('logins', {
+    loginID: {
+       type: DataTypes.INTEGER,
+       primaryKey: true
+    },
     userName: {
       type: DataTypes.STRING(50),
       unique: true
@@ -11,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     classMethods: {
       associate: function(models) {
-        // associations can be defined here
+
       }
     }
   });
