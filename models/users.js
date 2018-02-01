@@ -3,8 +3,10 @@ module.exports = (sequelize, DataTypes) => {
   var Users = sequelize.define('users', {
     userID: {
        type: DataTypes.INTEGER,
-       primaryKey: true
+       primaryKey: true,
+       autoIncrement: true
     },
+    relatedRoleID:DataTypes.INTEGER,
     firstName: DataTypes.STRING(50),
     lastName: DataTypes.STRING(100),
     userName: {
@@ -14,12 +16,6 @@ module.exports = (sequelize, DataTypes) => {
     email: {
       type: DataTypes.STRING,
       unique: true
-    }
-  }, {
-    classMethods: {
-      associate: function(models) {
-        // associations can be defined here
-      }
     }
   });
   return Users;

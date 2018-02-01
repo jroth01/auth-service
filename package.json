@@ -1,16 +1,32 @@
 {
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js"
+    "start": "nodemon app.js",
+    "lint": "./node_modules/.bin/eslint ./controllers/*.js",
+    "dev": "npm run-script reset && npm run-script setup && npm start",
+    "migrate": "node_modules/.bin/sequelize db:migrate",
+    "seed": "node_modules/.bin/sequelize db:seed:all",
+    "setup": "node_modules/.bin/sequelize db:migrate && node_modules/.bin/sequelize db:seed:all",
+    "reset": "node_modules/.bin/sequelize db:migrate:undo:all"
   },
   "dependencies": {
+    "bcrypt": "^1.0.3",
     "body-parser": "^1.18.2",
+    "chai": "^4.1.2",
+    "crypto": "^1.0.1",
     "express": "^4.16.2",
+    "express-validator": "^4.3.0",
     "fs": "0.0.1-security",
+    "jsonwebtoken": "^8.1.1",
+    "mocha": "^5.0.0",
     "morgan": "^1.9.0",
     "path": "^0.12.7",
     "pg": "^6.4.1",
     "sequelize": "^3.2.0",
     "sequelize-cli": "^3.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.16.0",
+    "eslint-config-google": "^0.9.1"
   }
 }

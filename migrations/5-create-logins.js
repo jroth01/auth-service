@@ -14,7 +14,20 @@ module.exports = {
       },
       passwordSalt: Sequelize.STRING,
       passwordHash: Sequelize.STRING,
-      relatedUserID: Sequelize.INTEGER,
+      relatedUserID: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'users', // foreign key on users
+          key: 'userID'
+        },
+      },
+      relatedRoleID:{
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'roles', // foreign key on users
+          key: 'roleID'
+        },
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
